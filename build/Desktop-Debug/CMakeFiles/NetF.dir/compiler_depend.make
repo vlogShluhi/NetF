@@ -1481,6 +1481,7 @@ CMakeFiles/NetF.dir/firewall.cpp.o: /home/shluha/projects/Netf/firewall.cpp \
   /usr/include/c++/15.1.1/clocale \
   /usr/include/c++/15.1.1/concepts \
   /usr/include/c++/15.1.1/cstddef \
+  /usr/include/c++/15.1.1/cstdint \
   /usr/include/c++/15.1.1/cstdio \
   /usr/include/c++/15.1.1/cstdlib \
   /usr/include/c++/15.1.1/ctime \
@@ -1602,19 +1603,15 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/assert.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
-  /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
-  /usr/include/bits/environments.h \
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/flt-eval-method.h \
   /usr/include/bits/fp-fast.h \
   /usr/include/bits/fp-logb.h \
-  /usr/include/bits/getopt_core.h \
-  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/in.h \
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
@@ -1630,29 +1627,15 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/bits/netdb.h \
   /usr/include/bits/posix1_lim.h \
   /usr/include/bits/posix2_lim.h \
-  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/sched.h \
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
-  /usr/include/bits/sigaction.h \
-  /usr/include/bits/sigcontext.h \
-  /usr/include/bits/sigevent-consts.h \
-  /usr/include/bits/siginfo-arch.h \
-  /usr/include/bits/siginfo-consts-arch.h \
-  /usr/include/bits/siginfo-consts.h \
-  /usr/include/bits/signal_ext.h \
-  /usr/include/bits/signum-arch.h \
-  /usr/include/bits/signum-generic.h \
-  /usr/include/bits/sigstack.h \
-  /usr/include/bits/sigstksz.h \
-  /usr/include/bits/sigthread.h \
   /usr/include/bits/sockaddr.h \
   /usr/include/bits/socket.h \
   /usr/include/bits/socket_type.h \
-  /usr/include/bits/ss_flags.h \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
@@ -1680,19 +1663,14 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/bits/types/error_t.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/mbstate_t.h \
-  /usr/include/bits/types/sig_atomic_t.h \
   /usr/include/bits/types/sigevent_t.h \
-  /usr/include/bits/types/siginfo_t.h \
   /usr/include/bits/types/sigset_t.h \
-  /usr/include/bits/types/sigval_t.h \
-  /usr/include/bits/types/stack_t.h \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/bits/types/struct_iovec.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/types/struct_osockaddr.h \
   /usr/include/bits/types/struct_sched_param.h \
-  /usr/include/bits/types/struct_sigstack.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/struct_tm.h \
@@ -1702,7 +1680,6 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
   /usr/include/bits/uio_lim.h \
-  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
@@ -1826,7 +1803,6 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/c++/15.1.1/cmath \
   /usr/include/c++/15.1.1/compare \
   /usr/include/c++/15.1.1/concepts \
-  /usr/include/c++/15.1.1/csignal \
   /usr/include/c++/15.1.1/cstddef \
   /usr/include/c++/15.1.1/cstdint \
   /usr/include/c++/15.1.1/cstdio \
@@ -1920,7 +1896,6 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/inttypes.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
-  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/if_ether.h \
   /usr/include/linux/limits.h \
@@ -2119,7 +2094,6 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/qt6/QtWidgets/qwidget.h \
   /usr/include/rpc/netdb.h \
   /usr/include/sched.h \
-  /usr/include/signal.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
@@ -2132,9 +2106,7 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
   /usr/include/sys/socket.h \
   /usr/include/sys/time.h \
   /usr/include/sys/types.h \
-  /usr/include/sys/ucontext.h \
   /usr/include/time.h \
-  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/limits.h \
@@ -2649,44 +2621,26 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/asm/types.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
-  /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
-  /usr/include/bits/environments.h \
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
-  /usr/include/bits/getopt_core.h \
-  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/in.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/netdb.h \
-  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/sched.h \
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
-  /usr/include/bits/sigaction.h \
-  /usr/include/bits/sigcontext.h \
-  /usr/include/bits/sigevent-consts.h \
-  /usr/include/bits/siginfo-arch.h \
-  /usr/include/bits/siginfo-consts-arch.h \
-  /usr/include/bits/siginfo-consts.h \
-  /usr/include/bits/signal_ext.h \
-  /usr/include/bits/signum-arch.h \
-  /usr/include/bits/signum-generic.h \
-  /usr/include/bits/sigstack.h \
-  /usr/include/bits/sigstksz.h \
-  /usr/include/bits/sigthread.h \
   /usr/include/bits/sockaddr.h \
   /usr/include/bits/socket.h \
   /usr/include/bits/socket_type.h \
-  /usr/include/bits/ss_flags.h \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
@@ -2714,19 +2668,14 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/bits/types/error_t.h \
   /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/mbstate_t.h \
-  /usr/include/bits/types/sig_atomic_t.h \
   /usr/include/bits/types/sigevent_t.h \
-  /usr/include/bits/types/siginfo_t.h \
   /usr/include/bits/types/sigset_t.h \
-  /usr/include/bits/types/sigval_t.h \
-  /usr/include/bits/types/stack_t.h \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/bits/types/struct_iovec.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/types/struct_osockaddr.h \
   /usr/include/bits/types/struct_sched_param.h \
-  /usr/include/bits/types/struct_sigstack.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/struct_tm.h \
@@ -2735,19 +2684,15 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
-  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
-  /usr/include/c++/15.1.1/atomic \
   /usr/include/c++/15.1.1/backward/binders.h \
   /usr/include/c++/15.1.1/bit \
   /usr/include/c++/15.1.1/bits/alloc_traits.h \
   /usr/include/c++/15.1.1/bits/allocator.h \
-  /usr/include/c++/15.1.1/bits/atomic_base.h \
-  /usr/include/c++/15.1.1/bits/atomic_lockfree_defines.h \
   /usr/include/c++/15.1.1/bits/basic_ios.h \
   /usr/include/c++/15.1.1/bits/basic_ios.tcc \
   /usr/include/c++/15.1.1/bits/basic_string.h \
@@ -2821,7 +2766,6 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/c++/15.1.1/cerrno \
   /usr/include/c++/15.1.1/clocale \
   /usr/include/c++/15.1.1/concepts \
-  /usr/include/c++/15.1.1/csignal \
   /usr/include/c++/15.1.1/cstddef \
   /usr/include/c++/15.1.1/cstdint \
   /usr/include/c++/15.1.1/cstdio \
@@ -2881,7 +2825,6 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/gnu/stubs.h \
   /usr/include/inttypes.h \
   /usr/include/libintl.h \
-  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/if_ether.h \
   /usr/include/linux/posix_types.h \
@@ -2905,7 +2848,6 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/pthread.h \
   /usr/include/rpc/netdb.h \
   /usr/include/sched.h \
-  /usr/include/signal.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
@@ -2916,9 +2858,7 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o: /home/shluha/projects/Netf/trafficmoni
   /usr/include/sys/socket.h \
   /usr/include/sys/time.h \
   /usr/include/sys/types.h \
-  /usr/include/sys/ucontext.h \
   /usr/include/time.h \
-  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
@@ -3010,6 +2950,8 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o:
 
 /usr/lib/libbrotlidec.so.1:
 
+/usr/lib/libbrotlicommon.so.1:
+
 /usr/lib/libb2.so.1:
 
 /usr/lib/ld-linux-x86-64.so.2:
@@ -3023,6 +2965,8 @@ CMakeFiles/NetF.dir/trafficmonitor.cpp.o:
 /usr/lib/libm.so:
 
 /usr/lib/libgcc_s.so:
+
+/usr/lib/crti.o:
 
 /usr/include/qt6/QtWidgets/qmenu.h:
 
@@ -3045,36 +2989,6 @@ NetF_autogen/include/ui_mainwindow.h:
 /usr/include/qt6/QtCore/qcoreapplication.h:
 
 /usr/include/qt6/QtCore/qabstracteventdispatcher.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/bits/unistd_ext.h:
-
-/usr/include/bits/types/struct_sigstack.h:
-
-/usr/include/bits/ss_flags.h:
-
-/usr/include/bits/sigstack.h:
-
-/usr/lib/crti.o:
-
-/usr/include/bits/signum-arch.h:
-
-/usr/include/bits/siginfo-consts-arch.h:
-
-/usr/include/bits/siginfo-arch.h:
-
-/usr/include/bits/sigevent-consts.h:
-
-/usr/include/bits/sigaction.h:
-
-/usr/lib/libbrotlicommon.so.1:
-
-/usr/include/bits/posix_opt.h:
-
-/usr/include/bits/getopt_core.h:
-
-/usr/include/bits/confname.h:
 
 /usr/include/wctype.h:
 
@@ -3402,8 +3316,6 @@ CMakeFiles/NetF.dir/mainwindow.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake:
 
-/usr/include/bits/types/stack_t.h:
-
 /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake:
@@ -3556,25 +3468,15 @@ CMakeFiles/NetF.dir/main.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake:
 
-/usr/include/bits/sigthread.h:
-
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake:
 
-/usr/include/bits/types/siginfo_t.h:
-
 /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake:
-
-/usr/include/c++/15.1.1/csignal:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake:
 
-/usr/include/bits/signum-generic.h:
-
 /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake:
-
-/usr/include/sys/ucontext.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake:
 
@@ -3799,8 +3701,6 @@ NetF_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/c++/15.1.1/bits/utility.h:
-
-/usr/include/bits/environments.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake:
 
@@ -4040,8 +3940,6 @@ CMakeFiles/4.0.2-dirty/CMakeSystem.cmake:
 
 /usr/include/bits/uintn-identity.h:
 
-/usr/include/bits/signal_ext.h:
-
 /usr/include/qt6/QtCore/qlist.h:
 
 /usr/include/c++/15.1.1/debug/assertions.h:
@@ -4154,8 +4052,6 @@ CMakeFiles/4.0.2-dirty/CMakeSystem.cmake:
 
 /usr/lib/cmake/Qt6CorePrivate/Qt6CorePrivateTargets.cmake:
 
-/usr/include/bits/sigstksz.h:
-
 /usr/include/c++/15.1.1/iomanip:
 
 /usr/include/alloca.h:
@@ -4218,15 +4114,11 @@ CMakeFiles/4.0.2-dirty/CMakeSystem.cmake:
 
 /usr/include/bits/timex.h:
 
-/usr/include/bits/types/sig_atomic_t.h:
-
 /usr/include/c++/15.1.1/utility:
 
 /usr/include/c++/15.1.1/bits/localefwd.h:
 
 /usr/include/qt6/QtCore/qttypetraits.h:
-
-/usr/include/signal.h:
 
 /usr/include/bits/atomic_wide_counter.h:
 
@@ -4454,8 +4346,6 @@ CMakeFiles/4.0.2-dirty/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/15.1.1/tr1/modified_bessel_func.tcc:
 
-/usr/include/bits/siginfo-consts.h:
-
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/include/c++/15.1.1/bits/chrono.h:
@@ -4621,8 +4511,6 @@ CMakeFiles/NetF.dir/firewall.cpp.o:
 /usr/share/cmake/Modules/FindThreads.cmake:
 
 /usr/include/qt6/QtCore/qforeach.h:
-
-/usr/include/bits/types/sigval_t.h:
 
 /usr/include/qt6/QtCore/qsharedpointer_impl.h:
 
@@ -4892,8 +4780,6 @@ CMakeFiles/NetF.dir/firewall.cpp.o:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
 
-/usr/include/bits/getopt_posix.h:
-
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake:
@@ -4913,8 +4799,6 @@ CMakeFiles/NetF.dir/firewall.cpp.o:
 /usr/include/qt6/QtGui/qtgui-config.h:
 
 /usr/include/qt6/QtGui/qtguiexports.h:
-
-/usr/include/unistd.h:
 
 /usr/include/qt6/QtGui/qfont.h:
 
@@ -5027,8 +4911,6 @@ CMakeFiles/NetF.dir/NetF_autogen/mocs_compilation.cpp.o:
 /usr/include/qt6/QtGui/qfontinfo.h:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
-
-/usr/include/bits/sigcontext.h:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
 
