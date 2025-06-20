@@ -343,29 +343,18 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
  /usr/include/qt6/QtWidgets/qtabwidget.h \
  /home/shluha/projects/Netf/trafficmonitor.h \
- /home/shluha/projects/Netf/firewall.h /usr/include/c++/15.1.1/iomanip \
- /usr/include/c++/15.1.1/locale \
+ /home/shluha/projects/Netf/firewall.h /usr/include/c++/15.1.1/iostream \
+ /usr/include/c++/15.1.1/ostream /usr/include/c++/15.1.1/bits/ostream.h \
+ /usr/include/c++/15.1.1/ios /usr/include/c++/15.1.1/bits/basic_ios.h \
  /usr/include/c++/15.1.1/bits/locale_facets.h \
  /usr/include/c++/15.1.1/cwctype /usr/include/wctype.h \
  /usr/include/bits/wctype-wchar.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
  /usr/include/c++/15.1.1/bits/locale_facets.tcc \
- /usr/include/c++/15.1.1/bits/locale_facets_nonio.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/15.1.1/bits/codecvt.h \
- /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
- /usr/include/c++/15.1.1/bits/locale_conv.h \
- /usr/include/c++/15.1.1/bits/quoted_string.h \
- /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/istream \
- /usr/include/c++/15.1.1/ios /usr/include/c++/15.1.1/bits/basic_ios.h \
  /usr/include/c++/15.1.1/bits/basic_ios.tcc \
- /usr/include/c++/15.1.1/ostream /usr/include/c++/15.1.1/bits/ostream.h \
- /usr/include/c++/15.1.1/bits/ostream.tcc \
- /usr/include/c++/15.1.1/bits/istream.tcc \
- /usr/include/c++/15.1.1/bits/sstream.tcc \
- /usr/include/c++/15.1.1/iostream /usr/include/net/ethernet.h \
+ /usr/include/c++/15.1.1/bits/ostream.tcc /usr/include/c++/15.1.1/istream \
+ /usr/include/c++/15.1.1/bits/istream.tcc /usr/include/net/ethernet.h \
  /usr/include/linux/if_ether.h /usr/include/netinet/ip.h \
  /usr/include/netinet/in.h /usr/include/sys/socket.h \
  /usr/include/bits/types/struct_iovec.h /usr/include/bits/socket.h \
@@ -380,6 +369,17 @@ CMakeFiles/NetF.dir/main.cpp.o: /home/shluha/projects/Netf/main.cpp \
  /usr/include/rpc/netdb.h /usr/include/bits/types/sigevent_t.h \
  /usr/include/bits/types/__sigval_t.h /usr/include/bits/netdb.h \
  /usr/include/arpa/inet.h /usr/include/pcap/bpf.h /usr/include/pcap/dlt.h \
+ /usr/include/c++/15.1.1/mutex /usr/include/c++/15.1.1/bits/std_mutex.h \
+ /usr/include/c++/15.1.1/bits/unique_lock.h \
+ /usr/include/c++/15.1.1/iomanip /usr/include/c++/15.1.1/locale \
+ /usr/include/c++/15.1.1/bits/locale_facets_nonio.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/15.1.1/bits/codecvt.h \
+ /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/15.1.1/bits/locale_conv.h \
+ /usr/include/c++/15.1.1/bits/quoted_string.h \
+ /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/bits/sstream.tcc \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \
