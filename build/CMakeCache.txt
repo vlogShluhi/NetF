@@ -404,7 +404,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=0
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -563,7 +563,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][ ][v()]
 //Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v2.4.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v2.5.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -776,6 +776,8 @@ QT_FEATURE_cxx11_future:INTERNAL=ON
 QT_FEATURE_cxx17_filesystem:INTERNAL=ON
 //Qt feature: cxx20 (from target Qt6::Core)
 QT_FEATURE_cxx20:INTERNAL=OFF
+//Qt feature: cxx20_format (from target Qt6::Core)
+QT_FEATURE_cxx20_format:INTERNAL=ON
 //Qt feature: cxx23_stacktrace (from target Qt6::Core)
 QT_FEATURE_cxx23_stacktrace:INTERNAL=OFF
 //Qt feature: cxx2a (from target Qt6::Core)

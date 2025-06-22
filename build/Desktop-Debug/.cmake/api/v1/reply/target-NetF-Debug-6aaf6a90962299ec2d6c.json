@@ -55,7 +55,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 938,
+				"line" : 935,
 				"parent" : 1
 			},
 			{
@@ -67,7 +67,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 688,
+				"line" : 690,
 				"parent" : 3
 			},
 			{
@@ -95,7 +95,7 @@
 			{
 				"command" : 8,
 				"file" : 4,
-				"line" : 222,
+				"line" : 228,
 				"parent" : 8
 			},
 			{
@@ -230,11 +230,11 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17"
+					"fragment" : "-DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always"
 				},
 				{
 					"backtrace" : 30,
-					"fragment" : "-fno-direct-access-external-data"
+					"fragment" : "-mno-direct-extern-access"
 				}
 			],
 			"defines" : 
@@ -264,7 +264,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/shluha/projects/Netf/build/NetF_autogen/include"
+					"path" : "/home/shluha/projects/Netf/build/Desktop-Debug/NetF_autogen/include"
 				},
 				{
 					"backtrace" : 32,
@@ -346,7 +346,7 @@
 		],
 		"prefix" : 
 		{
-			"path" : "/usr/local"
+			"path" : "/tmp"
 		}
 	},
 	"link" : 
@@ -354,12 +354,12 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-DQT_QML_DEBUG -g",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "/usr/lib/libQt6Widgets.so.6.9.0",
+				"fragment" : "/usr/lib/libQt6Widgets.so.6.9.1",
 				"role" : "libraries"
 			},
 			{
@@ -369,7 +369,7 @@
 			},
 			{
 				"backtrace" : 13,
-				"fragment" : "/usr/lib/libQt6Gui.so.6.9.0",
+				"fragment" : "/usr/lib/libQt6Gui.so.6.9.1",
 				"role" : "libraries"
 			},
 			{
@@ -384,7 +384,7 @@
 			},
 			{
 				"backtrace" : 30,
-				"fragment" : "/usr/lib/libQt6Core.so.6.9.0",
+				"fragment" : "/usr/lib/libQt6Core.so.6.9.1",
 				"role" : "libraries"
 			}
 		],
@@ -421,10 +421,16 @@
 			]
 		},
 		{
+			"name" : "Forms",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		},
+		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4,
 				10
 			]
 		},
@@ -442,7 +448,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/NetF_autogen/mocs_compilation.cpp",
+			"path" : "build/Desktop-Debug/NetF_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -492,20 +498,20 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/NetF_autogen/include/ui_mainwindow.h",
+			"path" : "build/Desktop-Debug/NetF_autogen/include/ui_mainwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/NetF_autogen/timestamp",
-			"sourceGroupIndex" : 2
+			"path" : "build/Desktop-Debug/NetF_autogen/timestamp",
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/NetF_autogen/timestamp.rule",
-			"sourceGroupIndex" : 3
+			"path" : "build/Desktop-Debug/NetF_autogen/timestamp.rule",
+			"sourceGroupIndex" : 4
 		}
 	],
 	"type" : "EXECUTABLE"

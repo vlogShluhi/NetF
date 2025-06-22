@@ -7,10 +7,10 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/shluha/projects/Netf/CMakeLists.txt",
-		"/home/shluha/projects/Netf/build/CMakeFiles/4.0.2-dirty/CMakeSystem.cmake",
+		"/home/shluha/projects/Netf/build/CMakeFiles/4.0.3-dirty/CMakeSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake",
-		"/home/shluha/projects/Netf/build/CMakeFiles/4.0.2-dirty/CMakeCXXCompiler.cmake",
+		"/home/shluha/projects/Netf/build/CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake",
@@ -567,7 +567,7 @@
 		"/usr/include/c++/15.1.1",
 		"/usr/include/c++/15.1.1/x86_64-pc-linux-gnu",
 		"/usr/include/c++/15.1.1/backward",
-		"/usr/lib/clang/19/include",
+		"/usr/lib/clang/20/include",
 		"/usr/local/include"
 	],
 	"MOC_MACRO_NAMES" : 

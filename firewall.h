@@ -4,23 +4,21 @@
 #include <cstdint>
 #include <iostream>
 #include <net/ethernet.h>
+#include <netinet/in.h>
 #include <netinet/ip.h>
 #include <netinet/tcp.h>
 #include <pcap.h>
 #include <ctime>
 #include <map>
+#include <qnamespace.h>
 #include <set>
 #include <mutex>
 #include <iomanip>
+#include <sys/types.h>
 class firewall
 {
 public:
     firewall();
-    static void showAtackPool(){
-        for(auto& ip :  firewall::SYNatack_ip_pool){
-            // std::cout<<std::endl<<ip<<std::endl;
-        }
-    }
     static void analyzePacket(const u_char* packet, const struct pcap_pkthdr* header) {
         static std::map<uint32_t,int> UDP_count_map;
         static std::map<uint32_t,int> ICMP_count_map;
@@ -96,28 +94,97 @@ public:
                 // if (tcph->th_flags & TH_URG) std::cout << "URG ";
                 // std::cout << std::endl;
                 uint8_t flags = tcph->th_flags;
+
+                if (ntohs(tcph->th_dport)==22) {//SSH bruteforce
+                    static std::map<uint32_t,int> ssh_connect_attempts;
+                    static std::map<uint32_t,int> ssh_bruteforce_attempts;
+                    static std::map<uint,time_t> last_ssh_connect;
+                    static std::map<uint,time_t> last_ssh_bruteforce;
+                    time_t now = time(nullptr);
+                    last_ssh_connect[src_ip]= now;
+
+                    if (tcph->th_flags == TH_SYN) { //SSH connect flood check   
+                        if (now - last_ssh_connect[src_ip]>60) {
+                            ssh_connect_attempts[src_ip] = 0;
+                        }
+                        
+                        ssh_connect_attempts[src_ip]++;
+                        last_ssh_connect[src_ip] = now;
+
+                        if (ssh_connect_attempts[src_ip] > 5) {
+                            std::cout << "[ALERT] Possible SSH connection flood from: "
+                                << inet_ntoa(iph->ip_src) 
+                                << " (" << ssh_connect_attempts[src_ip] << " SYNs in 60s)" 
+                                << std::endl;
+                            SYNatack_ip_pool.insert(src_ip);
+                        }
+                    }
+
+                    if ((tcph->th_flags & (TH_SYN|TH_FIN|TH_RST))==0) {//Bruteforce check
+                        if (now - last_ssh_connect[src_ip]>60) {
+                            ssh_bruteforce_attempts[src_ip] = 0;
+                        }
+
+                        ssh_bruteforce_attempts[src_ip]++;
+                        last_ssh_bruteforce[src_ip] = now;
+                        
+                        if (ssh_bruteforce_attempts[src_ip]>10) {
+                            std::cout << "[ALERT] Possible SSH bruteforce from: "
+                                << inet_ntoa(iph->ip_src) 
+                                << " (" << ssh_bruteforce_attempts[src_ip] << " auth attempts in 60s)"
+                                << std::endl;
+                            SYNatack_ip_pool.insert(src_ip);
+                        }
+                    }
+
+                    static time_t last_cleanup = 0;
+                    if (now - last_cleanup > 300) {
+                        cleanupOldEntries(ssh_connect_attempts, last_ssh_connect, 300);
+                        cleanupOldEntries(ssh_bruteforce_attempts, last_ssh_bruteforce, 300);
+                        last_cleanup = now;
+                    }
+
+                }
+
                 if((flags & TH_SYN) && !(flags & TH_ACK)){//SYN flood
                     checkFloodAttack(src_ip,SYN_count_map,20,"SYN flood");
                 }
+
                 if((flags & TH_FIN) && (flags & TH_URG) && (flags & TH_PUSH) &&!(flags & TH_SYN) && !(flags & TH_ACK)) {//Xmas scan
                 checkFloodAttack(src_ip, Xmas_Scan_count_map, 10, "Xmas Scan");
-            }
+                }
+
                 if((flags & TH_FIN) && !(flags & TH_SYN)){// FIN scan
                     checkFloodAttack(src_ip,FIN_count_map,20,"FIN flood");
                 }
+
                 if ((flags & (TH_SYN | TH_ACK | TH_FIN | TH_RST)) == 0) {//Null scan
                     checkFloodAttack(src_ip, Null_Scan_count_map, 20, "Null Scan");
-                }
-                            
+                }            
             }
         }
     }
 
 private:
-   static void checkFloodAttack(uint32_t src_ip,
-                            std::map<uint32_t, int>& count_map,
-                            int threshold,
-                            const std::string& attack_name) {
+
+    static void cleanupOldEntries(std::map<uint32_t, int>& attempts, 
+                      std::map<uint32_t, time_t>& timestamps, 
+                      time_t timeout) {
+    time_t now = time(nullptr);
+    for (auto it = timestamps.begin(); it != timestamps.end(); ) {
+        if (now - it->second > timeout) {
+            attempts.erase(it->first);
+            it = timestamps.erase(it);
+        } else {
+            ++it;
+        }
+    }
+}
+
+    static void checkFloodAttack(uint32_t src_ip,
+        std::map<uint32_t, int>& count_map,
+        int threshold,
+        const std::string& attack_name) {
     count_map[src_ip]++;
     time_t now = time(nullptr);
     if (now - last_reset_time >= 1) { 
@@ -128,7 +195,6 @@ private:
                 std::cout << "[ALERT] Possible " << attack_name << " from: "
                           << ip_str << " (" << count << " packets)" << std::endl;
                 SYNatack_ip_pool.insert(ip);
-                showAtackPool();
             }
         }
         count_map.clear();

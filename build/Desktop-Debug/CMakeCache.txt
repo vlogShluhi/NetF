@@ -428,7 +428,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=0
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -581,7 +581,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][ ][v()]
 //Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v2.4.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v2.5.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -794,6 +794,8 @@ QT_FEATURE_cxx11_future:INTERNAL=ON
 QT_FEATURE_cxx17_filesystem:INTERNAL=ON
 //Qt feature: cxx20 (from target Qt6::Core)
 QT_FEATURE_cxx20:INTERNAL=OFF
+//Qt feature: cxx20_format (from target Qt6::Core)
+QT_FEATURE_cxx20_format:INTERNAL=ON
 //Qt feature: cxx23_stacktrace (from target Qt6::Core)
 QT_FEATURE_cxx23_stacktrace:INTERNAL=OFF
 //Qt feature: cxx2a (from target Qt6::Core)
@@ -1485,7 +1487,7 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_LIBRARY
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/tmp
 __pkg_config_arguments_LIBPCAP:INTERNAL=REQUIRED;libpcap
 __pkg_config_arguments_PKG_XKB:INTERNAL=QUIET;xkbcommon
 __pkg_config_checked_LIBPCAP:INTERNAL=1

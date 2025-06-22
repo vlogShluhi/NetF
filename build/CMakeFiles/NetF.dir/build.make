@@ -167,11 +167,11 @@ NetF: CMakeFiles/NetF.dir/firewall.cpp.o
 NetF: CMakeFiles/NetF.dir/trafficmonitor.cpp.o
 NetF: CMakeFiles/NetF.dir/build.make
 NetF: CMakeFiles/NetF.dir/compiler_depend.ts
-NetF: /usr/lib/libQt6Widgets.so.6.9.0
-NetF: /usr/lib/libQt6Gui.so.6.9.0
+NetF: /usr/lib/libQt6Widgets.so.6.9.1
+NetF: /usr/lib/libQt6Gui.so.6.9.1
 NetF: /usr/lib/libGLX.so
 NetF: /usr/lib/libOpenGL.so
-NetF: /usr/lib/libQt6Core.so.6.9.0
+NetF: /usr/lib/libQt6Core.so.6.9.1
 NetF: CMakeFiles/NetF.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shluha/projects/Netf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable NetF"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NetF.dir/link.txt --verbose=$(VERBOSE)

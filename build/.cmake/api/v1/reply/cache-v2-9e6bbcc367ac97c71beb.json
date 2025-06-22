@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -1419,7 +1419,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/bin/pkg-config][v2.4.3()]"
+			"value" : "[/usr/bin/pkg-config][v2.5.0()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -3268,6 +3268,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_cxx20_format",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: cxx20_format (from target Qt6::Core)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
 		},
 		{
 			"name" : "QT_FEATURE_cxx23_stacktrace",

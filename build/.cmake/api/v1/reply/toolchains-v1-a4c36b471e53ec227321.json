@@ -13,7 +13,7 @@
 						"/usr/include/c++/15.1.1",
 						"/usr/include/c++/15.1.1/x86_64-pc-linux-gnu",
 						"/usr/include/c++/15.1.1/backward",
-						"/usr/lib/clang/19/include",
+						"/usr/lib/clang/20/include",
 						"/usr/local/include",
 						"/usr/include"
 					],
@@ -38,7 +38,7 @@
 					]
 				},
 				"path" : "/usr/bin/clang++",
-				"version" : "19.1.7"
+				"version" : "20.1.6"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 
