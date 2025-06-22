@@ -26,6 +26,8 @@ public:
         static std::map<uint32_t,int> FIN_count_map;
         static std::map<uint32_t,int> Null_Scan_count_map;
         static std::map<uint32_t,int> Xmas_Scan_count_map;
+        static std::map<uint32_t, std::set<uint16_t>> scanned_ports;
+        static std::map<uint32_t, time_t> scaned_ports_timestamps;
         // std::cout << "\nPacket size: " << header->len << " bytes"
         //           << " | Captured: " << header->caplen << " bytes"
         //           << " | Timestamp: " << header->ts.tv_sec << "."
@@ -95,7 +97,21 @@ public:
                 // std::cout << std::endl;
                 uint8_t flags = tcph->th_flags;
 
-                if (ntohs(tcph->th_dport)==22) {//SSH bruteforce
+                scanned_ports[src_ip].insert(ntohs(tcph->th_dport));
+                scaned_ports_timestamps[src_ip] = time(nullptr); 
+                if (scanned_ports[src_ip].size() > 15) {
+                    time_t now = time(nullptr);
+                    if (now - scaned_ports_timestamps[src_ip] < 60) {
+                        std::cout << "[ALERT] Port Scan detected from: " << inet_ntoa(iph->ip_src) 
+                             << " (" << scanned_ports[src_ip].size() << " ports in " 
+                            << (now - scaned_ports_timestamps[src_ip]) << " seconds)" << std::endl;
+                        SYNatack_ip_pool.insert(src_ip);
+                        scanned_ports.erase(src_ip);
+                        scaned_ports_timestamps.erase(src_ip);
+    }
+}
+
+                if (ntohs(tcph->th_dport)==22) {//SSH bruteforce check
                     static std::map<uint32_t,int> ssh_connect_attempts;
                     static std::map<uint32_t,int> ssh_bruteforce_attempts;
                     static std::map<uint,time_t> last_ssh_connect;
@@ -127,7 +143,7 @@ public:
 
                         ssh_bruteforce_attempts[src_ip]++;
                         last_ssh_bruteforce[src_ip] = now;
-                        
+
                         if (ssh_bruteforce_attempts[src_ip]>10) {
                             std::cout << "[ALERT] Possible SSH bruteforce from: "
                                 << inet_ntoa(iph->ip_src) 
@@ -146,19 +162,19 @@ public:
 
                 }
 
-                if((flags & TH_SYN) && !(flags & TH_ACK)){//SYN flood
+                if((flags & TH_SYN) && !(flags & TH_ACK)){//SYN flood check
                     checkFloodAttack(src_ip,SYN_count_map,20,"SYN flood");
                 }
 
-                if((flags & TH_FIN) && (flags & TH_URG) && (flags & TH_PUSH) &&!(flags & TH_SYN) && !(flags & TH_ACK)) {//Xmas scan
+                if((flags & TH_FIN) && (flags & TH_URG) && (flags & TH_PUSH) &&!(flags & TH_SYN) && !(flags & TH_ACK)) {//Xmas scan check
                 checkFloodAttack(src_ip, Xmas_Scan_count_map, 10, "Xmas Scan");
                 }
 
-                if((flags & TH_FIN) && !(flags & TH_SYN)){// FIN scan
+                if((flags & TH_FIN) && !(flags & TH_SYN)){// FIN scan check
                     checkFloodAttack(src_ip,FIN_count_map,20,"FIN flood");
                 }
 
-                if ((flags & (TH_SYN | TH_ACK | TH_FIN | TH_RST)) == 0) {//Null scan
+                if ((flags & (TH_SYN | TH_ACK | TH_FIN | TH_RST)) == 0) {//Null scan check
                     checkFloodAttack(src_ip, Null_Scan_count_map, 20, "Null Scan");
                 }            
             }
