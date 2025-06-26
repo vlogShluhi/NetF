@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-22ec870d6cdc4f0e8bb4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "NetF",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "NetF::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NetF-RelWithDebInfo-3fe6b995cd4f1aa00138.json",
+					"name" : "NetF",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NetF_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NetF_autogen-RelWithDebInfo-efddda09b3678972c184.json",
+					"name" : "NetF_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NetF_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NetF_autogen_timestamp_deps-RelWithDebInfo-ecb629fd34e34dad0077.json",
+					"name" : "NetF_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/shluha/projects/Netf/build/Desktop-Profile",
+		"source" : "/home/shluha/projects/Netf"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

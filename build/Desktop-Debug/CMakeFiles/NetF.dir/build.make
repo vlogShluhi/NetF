@@ -167,7 +167,10 @@ NetF: CMakeFiles/NetF.dir/firewall.cpp.o
 NetF: CMakeFiles/NetF.dir/trafficmonitor.cpp.o
 NetF: CMakeFiles/NetF.dir/build.make
 NetF: CMakeFiles/NetF.dir/compiler_depend.ts
+NetF: /usr/lib/libQt6Charts.so.6.9.1
+NetF: /usr/lib/libQt6OpenGLWidgets.so.6.9.1
 NetF: /usr/lib/libQt6Widgets.so.6.9.1
+NetF: /usr/lib/libQt6OpenGL.so.6.9.1
 NetF: /usr/lib/libQt6Gui.so.6.9.1
 NetF: /usr/lib/libGLX.so
 NetF: /usr/lib/libOpenGL.so

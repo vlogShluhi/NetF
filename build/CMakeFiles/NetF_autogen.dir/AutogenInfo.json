@@ -584,7 +584,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"/usr/bin/clang++",
-		"-std=gnu++17",
+		"-std=gnu++20",
 		"-w",
 		"-dM",
 		"-E",
