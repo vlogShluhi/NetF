@@ -1,9 +1,0 @@
-/home/shluha/projects/Netf/build/CMakeFiles/NetF.dir
-/home/shluha/projects/Netf/build/CMakeFiles/edit_cache.dir
-/home/shluha/projects/Netf/build/CMakeFiles/rebuild_cache.dir
-/home/shluha/projects/Netf/build/CMakeFiles/list_install_components.dir
-/home/shluha/projects/Netf/build/CMakeFiles/install.dir
-/home/shluha/projects/Netf/build/CMakeFiles/install/local.dir
-/home/shluha/projects/Netf/build/CMakeFiles/install/strip.dir
-/home/shluha/projects/Netf/build/CMakeFiles/NetF_autogen_timestamp_deps.dir
-/home/shluha/projects/Netf/build/CMakeFiles/NetF_autogen.dir
