@@ -1,0 +1,7 @@
+/home/shluha/projects/NetF_deamon/CMakeFiles/NetF_deamon.dir
+/home/shluha/projects/NetF_deamon/CMakeFiles/edit_cache.dir
+/home/shluha/projects/NetF_deamon/CMakeFiles/rebuild_cache.dir
+/home/shluha/projects/NetF_deamon/CMakeFiles/list_install_components.dir
+/home/shluha/projects/NetF_deamon/CMakeFiles/install.dir
+/home/shluha/projects/NetF_deamon/CMakeFiles/install/local.dir
+/home/shluha/projects/NetF_deamon/CMakeFiles/install/strip.dir

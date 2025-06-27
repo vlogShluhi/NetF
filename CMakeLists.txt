@@ -35,17 +35,17 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Ищем компоненты Qt с поддержкой Charts
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts)
+# Ищем компоненты Qt с поддержкой Charts и DBus
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts DBus)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts DBus)
 
 set(PROJECT_SOURCES
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    firewall.h firewall.cpp
-    trafficmonitor.h trafficmonitor.cpp
+
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -80,6 +80,7 @@ endif()
 target_link_libraries(NetF PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Charts
+    Qt${QT_VERSION_MAJOR}::DBus
     ${LIBPCAP_LIBRARIES}
 )
 
@@ -128,6 +129,7 @@ message(STATUS "----------------------------------------------------------")
 message(STATUS "Project configuration summary:")
 message(STATUS "  Qt version: ${QT_VERSION_MAJOR}")
 message(STATUS "  Qt Charts: Enabled")
+message(STATUS "  Qt DBus: Enabled")
 message(STATUS "  libpcap: ${LIBPCAP_LIBRARIES}")
 if(LIBNFTABLES_FOUND)
     message(STATUS "  libnftables: ${LIBNFTABLES_LIB}")

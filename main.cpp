@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "trafficmonitor.h"
 #include <QApplication>
 // sudo hping3 -S -p 80 --flood 127.0.0.1 SYN-flood
 // sudo hping3 -F -p 80 --flood 127.0.0.1 FIN-flood
@@ -16,7 +15,6 @@ int main(int argc, char *argv[]) {
     qDebug() << "Current user:" << qgetenv("USER");
     qDebug() << "Display:" << qgetenv("DISPLAY");
     qDebug() << "XAuthority:" << qgetenv("XAUTHORITY");
-  trafficmonitor::monitorTraffic("lo");
   MainWindow w;
   w.show();
   return a.exec();

@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/NetF_deamon.dir/link.d CMakeFiles/NetF_deamon.dir/firewall.cpp.o CMakeFiles/NetF_deamon.dir/trafficmonitor.cpp.o CMakeFiles/NetF_deamon.dir/netf_deamon.cpp.o -o NetF_deamon  -lpcap -ldbus-1

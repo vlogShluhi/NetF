@@ -9,11 +9,13 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QTimer>
+#include <QTableWidget>
+#include <QLabel>
+#include <QtDBus/QDBusConnection>
+#include <QtDBus/QDBusInterface>
 
-// Подключаем заголовки Qt Charts
 #include <QtCharts>
 
-// Убедитесь, что QT_CHARTS_USE_NAMESPACE определен
 #ifndef QT_CHARTS_USE_NAMESPACE
 #define QT_CHARTS_USE_NAMESPACE
 #endif
@@ -37,6 +39,7 @@ public:
 private slots:
     void updateCharts();
     void showAttackDetails();
+    void handleAttackDetected(const QString &type, const QString &source_ip, int count);
 
 private:
     Ui::MainWindow *ui;
@@ -47,9 +50,14 @@ private:
     QPushButton *detailsButton;
     AttackDetailsDialog *detailsDialog;
     QTimer *updateTimer;
+    QTableWidget *attackersTable;
+    QLabel *attackersLabel;
+
+    QMap<QString, int> attackCounts;
 
     void setupCharts();
     void setupUI();
+    void setupDBusConnection();
 };
 
 class AttackDetailsDialog : public QDialog
@@ -58,7 +66,7 @@ class AttackDetailsDialog : public QDialog
 
 public:
     explicit AttackDetailsDialog(QWidget *parent = nullptr);
-    void updateLogs();
+    void updateLogs(const QString &type, const QString &source_ip, int count);
 
 private:
     QTabWidget *tabWidget;
@@ -72,6 +80,7 @@ private:
     QTextEdit *sshLog;
     QTextEdit *portScanLog;
     QPushButton *closeButton;
+    QPushButton *clearButton;
 
     void setupUI();
 };

@@ -7,3 +7,12 @@
 // sudo hping3 -S -p 22 --flood 127.0.0.1 SSH-connect-flood
 // sudo hping3 -p 22 -A -d 100 --flood 127.0.0.1 SSH-bruteforce
 // for port in {1..50}; do sudo hping3 -S -p $port -c 1 127.0.0.1; done Port
+
+dbus-send --session --dest=org.freedesktop.DBus \
+          --type=method_call \
+          --print-reply \
+          /org/freedesktop/DBus \
+          org.freedesktop.DBus.ListNames | grep netf
+
+
+dbus-monitor --session "interface=com.netf.daemon"
